@@ -102,10 +102,10 @@
 (with-eval-after-load 'company
   (define-key company-active-map (kbd "<return>") nil)
   (define-key company-active-map (kbd "RET") nil)
-  (define-key company-active-map (kbd "C-SPC") #'company-complete-selection))
+  (define-key company-active-map (kbd "<tab>") #'company-complete-selection))
 
 (after! lisp-mode
-  (remove-hook 'lisp-mode-common-hook #'rainbow-delimiters-mode))
+  (remove-hook 'lisp-mode-hook #'rainbow-delimiters-mode))
 
 (after! sly
   (set-popup-rules!
